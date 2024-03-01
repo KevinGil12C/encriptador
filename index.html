@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="img/Logo.png" alt="Logo de alura" class="logo">
+    </header>
+
+
+    <main>
+        <div class="container">
+            <section class="encriptar">
+                <textarea class="text-area" name="" id="text-area" cols="20" rows="10"placeholder="Ingrese el texto aqui" oninput="convertirAMinusculas('text-area'); validarTexto('text-area'); eliminarAcentos('text-area');"></textarea>
+                <small style="color: red;display: none" id="lbl_text-area">* Este campo es requerido</small>
+                <small style="color: red;display: none" id="lbl_text-acento">* Este campo no admite acentos</small>
+                    <div class="informacion">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z" />
+                            </svg>
+                            Solo letras minúsculas y sin acentos
+                        </h6>
+                    </div>
+                    
+                <div class="botones">
+                    <button class="btn-encriptar" id="btn-encriptar">Encriptar!</button>
+                    <button class="btn-desencriptar" id="btn-desencriptar">Desencriptar!</button>
+                </div>
+            </section>
+    
+            <section class="desencriptar">
+                <img class="ocultar" src="img/Muñeco.png" alt="" id="muneco">
+                <textarea class="mensaje" name="" id="mensaje" cols="20" rows="10" hidden oninput="convertirAMinusculas('mensaje')"></textarea>
+                <div class="ocultar">
+                    <h6>Ningún mensaje fue encontrado</h6>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <small style="color: red;display: none" id="lbl_text_copy">* Ningún mensaje fue encontrado</small>
+                <div>
+                    <button class="btn-copiar" id="btn-copiar">Copiar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <img src="img/logo_transparent.png" alt="">
+        <p class="copyright">&copy; Copyright Kevscl - 2024</p>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
